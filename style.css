@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 30px);
     margin-right: 20px;
     flex-direction: column;
     
@@ -35,25 +35,31 @@
     
   }
   .container h1{
+    font-size: 40px;
+  }
+  .container h2{
+    position: relative;
+    top: -30px;
+    font-weight: lighter;
+  }
+  .container h1, h2{
     text-align: center;
     padding-bottom: 20px;
   }
   .container-winner:hover{
     cursor: pointer;
-    background-image: linear-gradient(
-        45deg,
-        hsl(240deg 100% 20%) 0%,
-        hsl(257deg 98% 24%) 11%,
-        hsl(265deg 96% 28%) 22%,
-        hsl(271deg 93% 32%) 33%,
-        hsl(276deg 91% 35%) 44%,
-        hsl(280deg 90% 39%) 56%,
-        hsl(284deg 90% 43%) 67%,
-        hsl(288deg 92% 46%) 78%,
-        hsl(292deg 95% 48%) 89%,
-        hsl(295deg 100% 50%) 100%
-      );
+    background-image: linear-gradient(to bottom, #af0000, #bd0f0b, #cb1a16, #da2420, #e82d2a, #ef3532, #f53c3a, #fc4342, #fc4b4a, #fc5251, #fc5858, #fb5f5f);
       border-style: none;
+      color: white;
+  }
+  .container h1 img{
+    height: 150px;
+    width: 150px;
+    padding-top: 0px;
+    
+    position: relative;
+    top: 45px;
+
   }
 
   
