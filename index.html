@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>F1 Winners</h1>
+      </div>
+
+    
+
+
+   <script>
+
+   function displayWinners() {
+    fetch('http://ergast.com/api/f1/driverstandings/1.json?limit=1000')
+        .then(response => response.json())
+        .then(data => {
+        const champions = data.MRData.StandingsTable.StandingsLists;
+
+        let startIndex = 0;
+        for (let i = 0; i < champions.length; i++) {
+            if (champions[i].season === '2005') {
+            startIndex = i;
+            break;
+            }
+        }
+
+        const winnersList = document.createElement('ul');
+        winnersList.setAttribute('id', 'winners-list');
+
+        for (let i = startIndex; i < champions.length; i++) {
+            const year = champions[i].season;
+            const winner = champions[i].DriverStandings[0].Driver;
+
+            const containerWinner = document.createElement('div');
+            containerWinner.classList.add('container-winner');
+
+            const yearItem = document.createElement('span');
+            yearItem.textContent = year;
+            containerWinner.appendChild(yearItem);
+
+            const winnerItem = document.createElement('span');
+            winnerItem.textContent = `${winner.givenName} ${winner.familyName}`;
+            containerWinner.appendChild(winnerItem);
+
+            winnersList.appendChild(containerWinner);
+        }
+
+        const container = document.querySelector('.container');
+        container.appendChild(winnersList);
+        })
+        .catch(error => console.log('An error occurred while fetching the standings data:', error));
+    }
+
+// Call the function to fetch and display winners
+displayWinners();
+   </script>
+</body>
+</html>
