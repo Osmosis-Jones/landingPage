@@ -97,6 +97,20 @@
     cursor: pointer;
     background-image: linear-gradient(to bottom, #af0000, #bd0f0b, #cb1a16, #da2420, #e82d2a, #ef3532, #f53c3a, #fc4342, #fc4b4a, #fc5251, #fc5858, #fb5f5f);
   }
+  #winners-list button{
+    width: 500px;
+    display: flex;
+    height: 40px;
+    margin-left: 25%;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+  }
+  button:hover{text-align: center;
+  font-weight: bold;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #af0000, #bd0f0b, #cb1a16, #da2420, #e82d2a, #ef3532, #f53c3a, #fc4342, #fc4b4a, #fc5251, #fc5858, #fb5f5f);
+  }
   .winner-highlight {
     background-color: yellow;
   }
