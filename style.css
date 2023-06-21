@@ -1,6 +1,7 @@
 .container {
     font-family: Arial, sans-serif;
     padding: 20px;
+  
   }
   
   #winners-list {
@@ -8,6 +9,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 30%;
     
   }
   
@@ -61,5 +63,41 @@
     top: 45px;
 
   }
-
+  #winners-list-items{
+    margin: auto;
+    list-style: decimal;
+    
+  }
+  #winners-list h2{
+    
+    margin-left: 30%;
+    text-align: center;
+  }
+  #winners-list {
+    margin-right: 20%;
+    
+  }
+  #winners-list-items li{
+    margin: auto;
+    border-style: solid;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 500px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  #winners-list-items li:hover{
+    margin: auto;
+    border-style: solid;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #af0000, #bd0f0b, #cb1a16, #da2420, #e82d2a, #ef3532, #f53c3a, #fc4342, #fc4b4a, #fc5251, #fc5858, #fb5f5f);
+  }
+  .winner-highlight {
+    background-color: yellow;
+  }
   
